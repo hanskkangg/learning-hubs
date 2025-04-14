@@ -13,10 +13,11 @@ Strings are **primitive data types** and are **immutable**, meaning once created
 ## 🎯 Accessing Characters
 Use bracket notation with an **index** (starting at 0):
 
-```js
+js
 let word = "JavaScript";
 console.log(word[0]); // J
 console.log(word[4]); // S
+
 
 🔤 Common String Methods
 1. indexOf()
