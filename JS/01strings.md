@@ -1,238 +1,206 @@
-Promp() = 
-indexOf = 
-charCodeAt() = 
-fromCharCode() = 
-slice() = 
-toUpperCase() =
-toLowerCase() =
-repeat() = 
-range error = 
-trim() = 
-trimStart() = 
-trimEnd() = 
-String Basics
-•	Definition: A string is a sequence of characters wrapped in either single quotes, double quotes or backticks. Strings are primitive data types and they are immutable. Immutability means that once a string is created, is cannot be changed.
-•	Accessing Characters from a String: To access a character from a string you can use bracket notation and pass in the index number. An index is the position of a character within a string, and it is zero-based.
+<div align="center">
+  <h1>JavaScript Fundamentals: Strings & Numbers</h1>
+  <sub>Author: <b>You!</b> | <small>Last updated: April 2025</small></sub>
+</div>
 
-string interpolation = ${user}
-Arithmetic operators = 
-OPERATOR PRECEDENT = order of the operator 
-String concatenation = 
+---
 
-Type Coercion = when a value from one data type is converted into another data type.
+## 📌 Overview
 
+This guide covers the **fundamentals of working with strings and numbers in JavaScript**, including methods, operators, and common concepts like type coercion and ASCII.
 
+---
 
+## 🔤 String Basics
 
- 
-Javascritp things I learned to day
+### ✅ What is a String?
 
-indexOf = finds “words” in the string.  And gives the index number.
-const loveIsAwesome = "LoveIsAwesome";
-console.log(loveIsAwesome.indexOf("Awesome"));
-Output =  6
+- A **string** is a sequence of characters wrapped in:
+  - `'single quotes'`
+  - `"double quotes"`
+  - `` `backticks` `` (for template literals)
 
-If console loveIsAwesome = “LoveIsAwesome”
-Console.log(loveIsAwesome.indexOf(“Hate”)) = which hate doesn’t exist
-Output = -1
+- Strings are **immutable** and **primitive data types**.
 
-What is ASCII and how does it work with charCodeAt() ?? 
-Understanding how characters are represented as numbers is fundamental 
-charCodeAt()
-fromCharCode()
-to interact with ASCII value 
-it’s like A = 65 a = 97 it covers 128 characters 
-console.log(String.fromCharCode(66));
-Output = B
+---
 
+### 🎯 Accessing Characters
 
-Include()
-Let phrase = “javascript is awesome!”
-Let result = phrase.includes(“awesome”)
-Console.log(result)
+```js
+let text = "JavaScript";
+console.log(text[0]); // J
+console.log(text[4]); // S
+🧰 String Methods
+🪟 prompt()
+js
+Copy
+Edit
+let name = prompt("Enter your name:");
+console.log(name);
+🔍 indexOf()
+js
+Copy
+Edit
+const str = "LoveIsAwesome";
+console.log(str.indexOf("Awesome")); // 6
+console.log(str.indexOf("Hate"));    // -1
+🔎 includes()
+js
+Copy
+Edit
+let phrase = "javascript is awesome!";
+console.log(phrase.includes("awesome"));        // true
+console.log(phrase.includes("Awesome"));        // false (case-sensitive)
+console.log("Hello, Javascript world!".includes("Javascript", 7)); // true
+✂️ slice(start, end)
+js
+Copy
+Edit
+let message = "Hello,World!";
+console.log(message.slice(0, 5));  // Hello
+console.log(message.slice(7));     // World!
 
-Output = TRUE
+console.log("JavaScript is fun!".slice(-4)); // fun!
+🔠 toUpperCase() / toLowerCase()
+js
+Copy
+Edit
+let greeting = "Hello World!";
+console.log(greeting.toUpperCase()); // HELLO WORLD!
+console.log(greeting.toLowerCase()); // hello world!
+🔁 repeat()
+js
+Copy
+Edit
+let word = "hello!";
+console.log(word.repeat(5)); // hello!hello!hello!hello!hello!
+⚠️ Negative or Infinity → RangeError
 
-Includes check if the string has substring inside the string 
-Its case sensitive.
+Decimals are rounded down
 
-If its Awesome and awesome = result will be false 
+✂️ trim(), trimStart(), trimEnd()
+js
+Copy
+Edit
+let message = "   Hello!   ";
+console.log(message.trim());       // "Hello!"
+console.log(message.trimStart());  // "Hello!   "
+console.log(message.trimEnd());    // "   Hello!"
+🔤 charCodeAt() / fromCharCode()
+js
+Copy
+Edit
+console.log("A".charCodeAt(0));       // 65
+console.log(String.fromCharCode(66)); // B
+A = 65, a = 97
 
-We can also do 
-Let text = “Hello, Javascript world!”;
-Let result = text.includes(“Javascript”,7);
-Console.log(result) will be TRUE.
-Because JAVASCRIPT exist in index of 7 in the string 
+Covers 128 ASCII characters
 
-It only gives true and false results 
+♻️ replace()
+js
+Copy
+Edit
+let text = "I love javascript!";
+let newText = text.replace("javascript", "coding");
+console.log(newText); // I love coding
+Only the first match is replaced unless using a global regex.
 
+💡 Template Literals
+js
+Copy
+Edit
+let user = "Dana";
+console.log(`Hello, ${user}!`); // Hello, Dana!
+➕ String Concatenation
+js
+Copy
+Edit
+let first = "Hello";
+let second = "World";
+console.log(first + " " + second); // Hello World
+🧮 Arithmetic Operators
+Operator	Description	Example	Result
++	Addition	5 + 2	7
+-	Subtraction	5 - 2	3
+*	Multiplication	5 * 2	10
+/	Division	10 / 2	5
+%	Modulus (Remainder)	5 % 2	1
+📊 Number Concepts
+JavaScript uses one number type for all numbers (integers, floats, etc.)
 
-How to EXTRACT substring from a string?
-Working in javascript, we often have to extract some portion of the string from a long string.
+Infinity occurs when dividing by zero or exceeding max value
 
-Slice() method = allows user to extract a portion of a string giving a new string without modifying original string. It takes two parameters
-STARTING index and OPTIONAL ending index 
-IF ENDING INDEX isn’t there, it extract from STARTING index to ending index
+NaN = Not a Number ('hi' / 2)
 
-Let message = “Hello,World!”;
-Let greeting = message.slice(0.5);
-Console.log(greeting)
-Output will be Hello
+js
+Copy
+Edit
+console.log(1 / 0);        // Infinity
+console.log('hi' / 2);     // NaN
+⚙️ Type Coercion
+Automatically converts values between types:
 
-Let message = “Hello, world!”;
-Let greeting = message.slice(7);
-Console.log(greeting)
-Output will be world!
+js
+Copy
+Edit
+console.log('10' - 5);   // 5
+console.log('10' * 2);   // 20
+console.log('20' / 2);   // 10
+console.log(5 + '10');   // "510"
+console.log('hello' + true); // "hellotrue"
+Booleans:
 
-We can also use NEGATIVE NUMBER
+js
+Copy
+Edit
+console.log(false + 1);  // 1
+console.log(true + 1);   // 2
+📈 Operator Precedence
+Order in which operations are evaluated:
 
-Let message = “Javsascript is fun!”;
-Let lastWord = message.slice(-4);
-Console.log(lastWord);
-Will be fun!
-It counts from the backward
- 
-It starts at index 7 and ends right before index 17. 
-Slice() is powerful tool for extracting parts of a string in javascript 
+js
+Copy
+Edit
+console.log(2 + 3 * 4);      // 14
+console.log((2 + 3) * 4);    // 20
+⚠️ Edge Cases
+js
+Copy
+Edit
+let result = "Hi!".repeat(-1);    // ❌ RangeError
+let result2 = "Hi!".repeat(0);    // "" (empty string)
+let result3 = "Hi!".repeat(2.9);  // "Hi!Hi!" (rounded down)
+✅ Summary
+Concept	Example	Result
+indexOf()	"hello".indexOf("e")	1
+includes()	"hello".includes("l")	true
+slice()	"hello".slice(1, 4)	"ell"
+toUpperCase()	"hi".toUpperCase()	"HI"
+toLowerCase()	"HI".toLowerCase()	"hi"
+repeat()	"ho!".repeat(3)	"ho!ho!ho!"
+trim()	" hi ".trim()	"hi"
+charCodeAt()	"A".charCodeAt(0)	65
+fromCharCode()	String.fromCharCode(65)	"A"
+replace()	"hi world".replace("world", "there")	"hi there"
+Made with ❤️ for learning JavaScript.
 
+yaml
+Copy
+Edit
 
-Can you change the case of string? For example
-Making all heading to upper case 
-Javascript has two built in method
+---
 
-toUpperCase()
-toLowerCase()
+✅ **Now you can copy and paste that entire file** into:
 
-let greeting = “Hello World!”;
-let upperCaseGreeting = greeting.toUpperCase();
-console.log(upperCaseGreeting); 
-will be HELLO WORLD!
-It gives a new string. It doesn’t modity the original string 
+- GitHub as a `README.md` or `01-strings-numbers.md`
+- Word or Notion (it'll retain formatting)
+- Any Markdown-supported platform
 
-
-How can we replace the portion of the string with another string?
-For example, we might need to update the user informaiton of URL 
-Or change the formatting of the dates or correct errors
-Replace() method
- 
-Let text = “I love javascript!”
-Let newText = text.replace(“javascript”, “coding”);
-Console.log (newText)
-Output I love coding
-
- 
-If there are a lot of world, only the first one will be replaced
- 
-
-
-How can you repeat the string x number of time?
-In javascript, there will be a situation where we need to repeat the string multiple times.
-Whether youre generated pattern or duplicating string.
-String.repeat(count);
-
-Let word = “hello!”;
-Let repeatWord = word.repeat(5);
-Console.log(repeatWord)
-We will get hello! 5 times  
-
- 
-If its negative number it will give error.
-
- 
-Infinity = infinite QUANTITY 
- 
-If its decimal, it will round down to the nearest integer
-
- 
-It returns empty string 
-
-
-How to trim white space? Its common to have unwanted white space in the beginning
-
-Trim method is commonly used to get rid of white space
-
-Let message = “   Hello!     “;
-Let trimmedMessage = message.trim();
-Console.log(trimmedMessage);
-Output : Hello! 
-
-Let message = “   Hello!   “
-Let trimmedMessage = message.trimStart();
-Console.log(trimmedMessage)
-Output: “Hello!     “;
-
-trimEnd()
-trim end
-
-trim()
-trimStart()
-trimEnd()
-
-JavaScript uses one unified number type to account for numbers
- 
- 
- 
-All floats are juts number, positive negative numbers are just number
-
-Infinity = used to represent numbers that are beyond the maximum limit.
-
- 
-Const notANumber = ‘hi’ / 2;
-Console.log(notANumber); = NaN
-
-Binary = a base 2 systems that uses only digits 1 and 0s
-Octal = a base 8 systems.
-Hexadecima = a base 16 that uses digits 0 to 9 and letters a to f 
-
-Number = 
-It covers both integers and floating-point numbers, as well as special cases like infinity and NaN.
-
-
-
-When are floating point numbers most useful in JavaScript?
-When you need more precision, such as in measurements or currencies.
-
-When might you encounter the value Infinity in JavaScript?
-When dividing a number by zero or exceeding the upper boundary of the Number type.
-
-What are the different arithmetric operators in javascript?
-Arithmetic operators = such as addition substraction multiplication such as remainder 
- 
-Divide by 0 we get infinity 
- 
-Remainder operator = modulo = left over value.
-
- 
-2^3  
-In javascript there’s no 2^3 
- 
-OPERATOR PRECEDENT = order of the operator 
+If you want a downloadable `.md` file or want this split into sections like "Day 1", "Day 2", etc., let me know — I can generate it for you in seconds.
 
 
-What happens when you mix string and number 
- 
-Javascript thinks 5 + stirng ‘10’ and string concanteration occurs so it becomes 510
- 
 
-Type Coercion = when a value from one data type is converted into another data type.
- 
-‘10’-5 = 5 
-‘10’* 2 = 20 
-‘20’/2 = 10
- 
 
- 
-
- 
-Javascript treats Boolean as numbers true = 1 false = 1
-So 
-False + 1 = 1 
-True + 1 = 2
-‘hello’ + true; 
-= hellotrue (string)
- 
-Null = Number
-Undefined = NaN
 
 
 
