@@ -1,0 +1,217 @@
+# 📘 JavaScript Fundamentals
+
+## 🔺 Operator Precedence
+
+- Operator precedence determines the **order** in which operations are evaluated.
+- JavaScript follows a specific order:
+  1. Parentheses `()`
+  2. Exponentiation `**` (right to left)
+  3. Multiplication `*`, Division `/`, Modulo `%`
+  4. Addition `+`, Subtraction `-`
+  5. Assignment `=`
+  6. Left to right (unless specified otherwise)
+
+```js
+console.log(2 + 3 * 4);      // 14
+console.log((2 + 3) * 4);    // 20
+console.log(2 + 6 / 3);      // 4
+console.log(10 - 2 + 3);     // 11
+```
+
+```js
+let a, b;
+a = b = 5;
+console.log(a);     // 5
+console.log(b);     // 5
+console.log(a + b); // 10
+```
+
+```js
+console.log(2 ** 3 ** 2); // 512 because 3 ** 2 = 9, so 2 ** 9
+```
+
+## 🔁 Increment and Decrement Operators
+
+- `++` increment
+- `--` decrement
+
+```js
+let x = 5;
+console.log(++x); // 6 (prefix)
+console.log(x);   // 6
+
+x = 5;
+console.log(x++); // 5 (postfix)
+console.log(x);   // 6
+```
+
+## 🧮 Compound Assignment
+
+```js
+let num = 5;
+num += 2;
+console.log(num); // 7
+```
+
+Operators:
+- `+=`, `-=`, `*=`, `/=`, `%=`, `**=`, `&=`, `|=`
+
+## ✅ Booleans and Equality
+
+```js
+let canDrive = true;
+if (canDrive) {
+  console.log("You can drive");
+} else {
+  console.log("You can’t drive");
+}
+
+console.log(5 == "5");  // true (loose equality)
+console.log(5 === "5"); // false (strict equality)
+console.log(5 != "5");  // false
+console.log(5 !== "5"); // true
+```
+
+## ⚖️ Comparison Operators
+
+```js
+let a = 5, b = 8;
+console.log(a > b);  // false
+console.log(a >= b); // false
+console.log(b >= a); // true
+```
+
+Avoid type coercion:
+- Use `===` and `!==`
+
+## ☝️ Unary Operators
+
+```js
+const str = "42";
+const strToNum = +str;
+console.log(strToNum);         // 42
+console.log(typeof str);       // string
+console.log(typeof strToNum);  // number
+
+let isOnline = true;
+console.log(!isOnline); // false
+```
+
+```js
+const num = 5;
+console.log(~num); // -6
+
+const result = void(2 + 2);
+console.log(result); // undefined
+```
+
+```js
+console.log(typeof 42); // "number"
+```
+
+## 🧠 Bitwise Operators
+
+```js
+let a = 5; // 101
+let b = 3; // 011
+
+console.log(a & b); // 1
+console.log(a | b); // 7
+console.log(a ^ b); // 6
+console.log(~a);    // -6
+
+console.log(a << 1); // 10
+console.log(a >> 1); // 2
+
+let x = 8;
+console.log(x << 2); // 32
+```
+
+## 🔄 Conditional Statements
+
+Truthy: non-empty strings, numbers (except 0), arrays, objects, `true`  
+Falsy: `false`, `0`, `""`, `null`, `undefined`, `NaN`
+
+```js
+if (null) {
+  console.log("Will not run");
+}
+
+if ("freecodecamp") {
+  console.log("This will run");
+}
+
+const age = 22;
+if (age >= 18) {
+  console.log("You are an adult");
+} else {
+  console.log("You are a minor");
+}
+```
+
+## ❓ Ternary Operator
+
+```js
+const temperature = 30;
+const weather = temperature > 25 ? "sunny" : "cool";
+console.log(`It’s a ${weather} day!`);
+```
+
+## ⚙️ Logical Operators
+
+```js
+const result1 = true && "hello";  // "hello"
+const result2 = 0 && 3;           // 0
+const result3 = false && 0;       // false
+
+if (2 < 3 && 3 < 4) {
+  console.log("This IF block runs");
+}
+
+const result4 = "thisistruthy" || false; // "thisistruthy"
+```
+
+## 🔄 Nullish Coalescing Operator (??)
+
+```js
+const result = null ?? "default";
+console.log(result); // "default"
+
+const userSetting = {
+  theme: null,
+  volume: 0,
+  notification: false,
+};
+
+let theme = userSetting.theme ?? "Light";
+console.log(theme); // "Light"
+```
+
+## 📐 Math Object
+
+```js
+console.log(Math.random());       // 0 to <1
+console.log(Math.min(1,5,3,9));   // 1
+console.log(Math.max(1,5,3,9));   // 9
+console.log(Math.ceil(4.3));      // 5
+console.log(Math.floor(4.7));     // 4
+console.log(Math.round(2.3));     // 2
+console.log(Math.round(4.5));     // 5
+console.log(Math.trunc(2.9));     // 2
+console.log(Math.sqrt(81));       // 9
+console.log(Math.cbrt(27));       // 3
+console.log(Math.abs(-5));        // 5
+console.log(Math.pow(2,3));       // 8
+console.log(Math.pow(8,2));       // 64
+```
+
+Random number between 1 and 20:
+
+```js
+const randomNum = Math.floor(Math.random() * 20) + 1;
+console.log(randomNum);
+```
+
+---
+
+✅ **Use this document as your JavaScript cheat sheet for operators, booleans, conditionals, and math functions.**
