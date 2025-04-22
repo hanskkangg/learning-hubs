@@ -94,15 +94,29 @@ We can use powershell by typing pwsh and bash for bash
 
 ![image](https://github.com/user-attachments/assets/3b412b6e-6c26-4ac2-878b-e24debe9674b)
 
-![image](https://github.com/user-attachments/assets/b6dd92db-6ed8-437a-aede-399d327be34f)
+![image](https://github.com/user-attachments/assets/af38f17a-4241-4d0e-bcf5-c2e3b09be91f)
+
+
+![image](https://github.com/user-attachments/assets/136fa69c-dcd9-4bb3-a90b-4f22a781633f)
+
+
+![image](https://github.com/user-attachments/assets/706715fa-2d40-42ef-b631-7ffffafb3f73)
+
+ 
+
+ ![image](https://github.com/user-attachments/assets/b2beef1d-76b7-425a-9d71-ea642b913706)
+
+ 
+![image](https://github.com/user-attachments/assets/62e3874c-4e86-4a0b-a200-62e9016c7383)
 
  
  
- 
+ ![image](https://github.com/user-attachments/assets/5d30dabb-208d-4631-8eb3-cf9392a928c6)
+ ![image](https://github.com/user-attachments/assets/202687e6-72db-4353-a5b9-c0ee05cd0f7b)
+ ![image](https://github.com/user-attachments/assets/a51d2055-cbc8-4ab7-a924-0561c223cf97)
 
- 
- 
- 
+
+
 CSP – 
 
 CDK - 
