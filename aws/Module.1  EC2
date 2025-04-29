@@ -1,0 +1,39 @@
+ Amazon EC2 (Elastic Compute Cloud) 
+It allows you to rent virtual servers (called instances) in the cloud to run your applications.
+The term “serverless” means that your code runs on servers, but you do not need to provision or manage these servers. With serverless computing, you can focus more on innovating new products and features instead of maintaining servers.
+Another benefit of serverless computing is the flexibility to scale serverless applications automatically. Serverless computing can adjust the applications' capacity by modifying the units of consumptions, such as throughput and memory. 
+An AWS service for serverless computing is AWS Lambda.
+
+
+
+AWS Lambda
+AWS Lambda(opens in a new tab) is a service that lets you run code without needing to provision or manage servers. 
+While using AWS Lambda, you pay only for the compute time that you consume. Charges apply only when your code is running
+
+Containers
+Containers provide you with a standard way to package your application's code and dependencies into a single object. You can also use containers for processes and workflows in which there are essential requirements for security, reliability, and scalability.
+
+Amazon Elastic Container Service (Amazon ECS)
+Amazon Elastic Container Service (Amazon ECS)(opens in a new tab) is a highly scalable, high-performance container management system that enables you to run and scale containerized applications on AWS. 
+Amazon ECS supports Docker containers. Docker(opens in a new tab) is a software platform that enables you to build, test, and deploy applications quickly. AWS supports the use of open-source Docker Community Edition and subscription-based Docker Enterprise Edition. With Amazon ECS, you can use API calls to launch and stop Docker-enabled applications.
+
+Amazon Elastic Container Service (Amazon ECS)
+Amazon Elastic Container Service (Amazon ECS)(opens in a new tab) is a highly scalable, high-performance container management system that enables you to run and scale containerized applications on AWS. 
+Amazon ECS supports Docker containers. Docker(opens in a new tab) is a software platform that enables you to build, test, and deploy applications quickly. AWS supports the use of open-source Docker Community Edition and subscription-based Docker Enterprise Edition. With Amazon ECS, you can use API calls to launch and stop Docker-enabled applications.
+
+AWS Fargate
+AWS Fargate(opens in a new tab) is a serverless compute engine for containers. It works with both Amazon ECS and Amazon EKS. 
+When using AWS Fargate, you do not need to provision or manage servers. AWS Fargate manages your server infrastructure for you. You can focus more on innovating and developing your applications, and you pay only for the resources that are required to run your containers.
+
+Amazon ECS (Elastic Container Service)
+	• AWS's own container orchestration service.
+	• Two Launch Types:
+		○ ECS on EC2 → You manage EC2 instances (cluster of servers) where containers run.
+		○ ECS on Fargate → No server management! AWS handles the infrastructure.
+	• You define tasks & services (Docker containers), ECS handles scheduling and scaling.
+
+
+
+
+Horizontal scaling
+We need somehting to distribute the service accordinlyg – ELASTIC LOAD BALANCER
