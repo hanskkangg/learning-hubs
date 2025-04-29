@@ -1,0 +1,81 @@
+Every region is connected using high speed fiber netowrk
+
+HOW TO CHOOSE REGION? 4 factors
+1.Compilance
+2.Proximity - How close are you ?
+3.Feature Availability 
+4.Pricing
+
+ 
+Selecting a Region
+When determining the right Region for your services, data, and applications, consider the following four business factors. 
+ 
+To learn more Regions, expand each of the following four categories.
+Proximity to your customers
+Selecting a Region that is close to your customers will help you to get content to them faster. For example, your company is based in Washington, DC, and many of your customers live in Singapore. You might consider running your infrastructure in the Northern Virginia Region to be close to company headquarters, and run your applications from the Singapore Region.
+
+Available services within a Region
+Sometimes, the closest Region might not have all the features that you want to offer to customers. AWS is frequently innovating by creating new services and expanding on features within existing services. However, making new services available around the world sometimes requires AWS to build out physical hardware one Region at a time. 
+
+Pricing
+Suppose that you are considering running applications in both the United States and Brazil. The way Brazil’s tax structure is set up, it might cost 50% more to run the same workload out of the São Paulo Region compared to the Oregon Region. You will learn in more detail that several factors determine pricing, but for now know that the cost of services can vary from Region to Region.
+
+
+An Availability Zone is a single data center or a group of data centers within a Region. Availability Zones are located tens of miles apart from each other. This is close enough to have low latency (the time between when content requested and received) between Availability Zones. However, if a disaster occurs in one part of the Region, they are distant enough to reduce the chance that multiple Availability Zones are affected.
+To review an example of running Amazon EC2 instances in multiple Availability Zones, choose the arrow buttons.
+
+· A Region is a geographical area that contains AWS resources.
+· An edge location is a data center that an AWS service uses to perform service-specific operations. Edge locations are examined in the next section of this module.
+· AWS Outposts is a service that you can use to run AWS infrastructure, services, and tools in your own on-premises data center in a hybrid approach. AWS Outposts is explored later in this module.
+
+CDN – Amazon Cloud Front  - it’s a service deliver data 
+
+Amazon cloudfront uses EDGE LOCATION to help accelerate communications with users no matter where they are all around the world 
+
+AWS outpost – aws will install a fully operational mini Region,  right inside your own data center.
+
+1.Regions are geographically isolated areas
+2.Regions contain availability Zones.
+3.Edge locations run amazon cloudfront
+
+Edge locations
+An edge location is a site that Amazon CloudFront uses to store cached copies of your content closer to your customers for faster delivery.
+
+AWS management console
+-Test environment
+-View AWS Bills
+-View Monitoring
+-Work with non-technical resources
+
+The AWS Management Console is a web-based interface for accessing and managing AWS services. You can quickly access recently used services and search for other services by name, keyword, or acronym. The console includes wizards and automated workflows that can simplify the process of completing tasks.
+
+You can also use the AWS Console mobile application to perform tasks such as monitoring resources, viewing alarms, and accessing billing information. Multiple identities can stay logged into the AWS Console mobile app at the same time.
+
+
+ 
+To save time when making API requests, you can use the AWS Command Line Interface (AWS CLI). AWS CLI enables you to control multiple AWS services directly from the command line within one tool. AWS CLI is available for users on Windows, macOS, and Linux. 
+ 
+To save time when making API requests, you can use the AWS Command Line Interface (AWS CLI). AWS CLI enables you to control multiple AWS services directly from the command line within one tool. AWS CLI is available for users on Windows, macOS, and Linux. 
+
+
+
+
+
+AWS Elastic Beanstalk – helps you provision Amazon EC2-based environment.
+Help you to focus on your business application, not the infrastrcuture 
+
+Cloudfront - infrastructure as code tool used to define a wide variety of AWS resources
+
+
+AWS CloudFormation – infrastcuture as Code (IaC) tool used to define a wide variety of AWS resources in a declarative way using JSON or YAML text-based documents called CLOUD FORMATION TEMPLATE
+
+AWS Elastic Beanstalk
+With AWS Elastic Beanstalk, you provide code and configuration settings, and Elastic Beanstalk deploys the resources necessary to perform the following tasks:
+	· Adjust capacity
+	· Load balancing
+	· Automatic scaling
+	· Application health monitoring
+
+AWS CloudFormation
+With AWS CloudFormation, you can treat your infrastructure as code. This means that you can build an environment by writing lines of code instead of using the AWS Management Console to individually provision resources.
+AWS CloudFormation provisions your resources in a safe, repeatable manner, enabling you to frequently build your infrastructure and applications without having to perform manual actions. It determines the right operations to perform when managing your stack and rolls back changes automatically if it detects errors.
